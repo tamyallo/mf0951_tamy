@@ -1,0 +1,311 @@
+.color-primary {
+    color: var(--color-primary);
+}
+
+.color-secondary {
+    color: var(--color-secondary);
+}
+
+.color-success {
+    color: var(--color-success);
+}
+
+.color-danger {
+    color: var(--color-danger);
+}
+
+.color-warning {
+    color: var(--color-warning);
+}
+
+.color-light {
+    color: var(--color-light);
+}
+
+.color-dark {
+    color: var(--color-dark);
+}
+
+.color-required {
+    color: tomato;
+}
+
+.color-optional {
+    color: inherit;
+}
+
+.color-info {
+    color: steelblue;
+}
+
+.small {
+    font-size: small;
+}
+
+.image-before:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-origin: border-box;
+}
+
+/* Marca de agua */
+
+.agua:before {
+    position: fixed;
+    content: '';
+    /* top : 10vh; */
+    bottom: 5vh;
+    right: 5vh;
+    /* ratio del logo 1020/495 */
+    height: 20vh;
+    /* width de la marca de agua =  height * ratio */
+    width: 41.21vh;
+    opacity: 0.2;
+    background-image: url('../../../svg/logo.svg');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Estilos iconos sociales */
+
+ul.sociales {
+    padding: 0;
+}
+
+ul.sociales li,
+section.sociales ul li {
+    display: inline-block;
+}
+
+ul.sociales li a {
+    width: 3em;
+    height: 3em;
+    display: block;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+figure.social {
+    margin: 0;
+}
+
+ul.sociales figure.social svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+
+
+
+/* Frontal y hover Facebook */
+
+ul.sociales li.facebook a {
+    background-color: #3B5998;
+}
+
+ul.sociales li.facebook a:hover svg {
+    fill: #3B5998;
+}
+
+/* Frontal y hover Twitter */
+
+ul.sociales li.twitter a {
+    background-color: #00ACEE;
+}
+
+ul.sociales li.twitter a:hover svg {
+    fill: #00ACEE;
+}
+
+/* Frontal y hover Pinterest */
+
+ul.sociales li.pinterest a {
+    background-color: #BD081C;
+}
+
+ul.sociales li.pinterest a:hover svg {
+    fill: #BD081C;
+}
+
+/* Frontal y hover LinkedIn */
+
+ul.sociales li.linkedin a {
+    background-color: #0077B5;
+}
+
+ul.sociales li.linkedin a:hover svg {
+    fill: #0077B5;
+}
+
+/* Frontal y hover GitHub */
+
+ul.sociales li.github a {
+    background-color: #000000;
+}
+
+ul.sociales li.github a:hover svg {
+    fill: #000000;
+}
+
+/* Frontal y hover Google+ */
+
+ul.sociales li.googleplus a {
+    background-color: #D34836;
+}
+
+ul.sociales li.googleplus a:hover svg {
+    fill: #D34836;
+}
+
+
+
+
+/* Para todos */
+ul.sociales li a:hover {
+    background-color: transparent;
+}
+
+
+/* figure.facebook svg {
+    fill: #3B5998;
+}
+
+figure.facebook:hover svg {
+} */
+
+/* figure.twitter svg path {
+    fill: #00ACEE;
+}
+
+figure.twitter:hover svg {
+    background-color: #00ACEE;
+}
+figure.twitter:hover svg path {
+    fill: white;
+} */
+
+footer .social svg {
+    fill: white;
+}
+
+section.sociales figure.social svg {
+    width: 2em;
+    height: 2em;
+}
+
+
+
+/* Estilos animate.css */
+
+article.animaciones ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    font-weight: bold;
+    font-size: x-large;
+    color: steelblue;
+}
+
+header.portada {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+}
+
+.portada:before {
+    opacity: 1;
+    filter: brightness(1) blur(2px) grayscale(0.8);
+}
+
+.portada.textos:before {
+    background-image: var(--img_cat1_img1);
+}
+.portada.imagenes:before {
+    background-image: var(--img_cat1_img2);
+}
+
+header.portada h2 {
+    position: absolute;
+    margin: 0;
+    padding: 1em;
+    width: 100%;
+    background: rgba(51, 53, 119, 0.5);
+    top: 30%;
+    text-align: center;
+    color: white;
+}
+
+body.nocturno {
+    background-color: black;
+}
+main.nocturno {
+    background-color: black;
+    color: white;
+}
+
+main.nocturno a {
+    color: yellow;
+}
+
+main.nocturno a:target,
+main.nocturno a:focus,
+main.nocturno a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background-color: var(--bg-body);
+    color: var(--color-body);
+    line-height: 1.6;
+}
+
+body main article h2 {
+    color: var(--color-b);
+}
+
+@media screen and (max-width: 30rem) {
+    body main {
+        padding: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    body main {
+        padding: 5vw;
+    }
+}
+
+@media screen and (max-width: 90rem) {
+    body main {
+        padding: 7.5vw;
+    }
+}
+
+@media screen and (min-width: 91rem) {
+    body main {
+        padding: 10vw;
+    }
+}

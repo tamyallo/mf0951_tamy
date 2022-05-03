@@ -1,0 +1,29 @@
+/* Contenido visible a algunos lectores de pantalla */
+
+.oculto { display: none; }
+
+/* Contenido invisible al ojo humano, pero ...  */
+/* Contenido visible a la Tecnología de Asistencia (AT) */
+    /* http://www.cssmojo.com/hide-content-from-sighted-users/ */
+    /* Sirve para ocultar a la vista ocular pero accesible en los lectores de pantalla, robots y validadores */
+
+.pechado {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    /* Para ie6, ie7 */
+    clip: rect(1px 1px 1px 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 0px !important;
+    width: 0px !important;
+    overflow: hidden;
+}
+
+/* Contenido inaccesible */
+
+.pechadisimo, .print {
+    display: none;
+    visibility: hidden;
+    overflow-x: hidden;
+    height: 0;
+}

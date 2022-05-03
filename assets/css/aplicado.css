@@ -1,0 +1,1182 @@
+@charset "UTF-8";
+/*
+
+-------------------------------
+    --- Inicializaciones ---
+-------------------------------
+
+*/
+
+/* @import url('_app/_theme/base.css'); */
+
+/*=============================================>>>>>
+* Web Design | Content Creation
+* Responsive Web Desing | Usable and Accessible Design
+* Framework Css3 | Semantic html5 templates
+* W3C Validator
+* (CC BY-NC)
+* @version 1.3 June 2017
+* @author Sonia Álvarez Brasa
+===============================================>>>>>*/
+
+/*
+    Las reglas agrupadas en esta categoría se aplican a
+    selectores HTML puros y sin descendientes.
+*/
+
+/* A TODOS: comodin no recomendable */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Centrado automático y familia por defecto */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* imagenes responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+:root {
+    /*
+
+    --------------------------------
+        --- header del sitio ---
+    --------------------------------
+
+    */
+    --height-header: 3.5rem;
+    /*
+
+    --------------------------------
+        --- logo del sitio ---
+    --------------------------------
+
+    */
+    /* Logo olímpico 1020 x 495 pixeles */
+    --url-logo-header: url('../svg/logo.svg');
+
+    /* ratio del logo 1020/495 */
+    /* ancho del logo = --height-header * ratio */
+    --wlogo-header: 7.21rem;
+    /* Efecto al hover */
+    --logo-filter--hover: hue-rotate(180deg);
+    /* Ejemplo de filtro múltiple */
+    /* filter: brightness(0.8) sepia(0.8) saturate(80); */
+
+    /*
+        URL's y ratios logos validadores
+    */
+    --url_w3c: url('../svg/w3c/css.svg');
+    --url_xhtml5: url('../svg/w3c/html5.svg');
+    --w3c_ratio: 88/31;
+    --xhtml5_ratio: 182/64;
+    --height-w3c: 1.5em;
+    /*
+
+    ------------------------------------
+        --- Colores corporativos ---
+    ------------------------------------
+
+    */
+    --color-b: #333577;
+    --color-t1: #807515;
+    --color-t2: #553000;
+    /* bootstrap Colors */
+    --color-primary: #007bff;
+    --color-secondary: #6c757d;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-warning: peru;
+    --color-info: #17a2b8;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+    --bg-body: #f9f9f9;
+    --color-body: #666666;
+    /* Colores menu */
+    --bg-menu: var(--color-b);
+    --bg-menu-item--hover: rgba(255, 255, 255, 0.2);
+    --bg-submenu: var(--color-t1);
+    --bg-submenu-item--hover: rgba(255, 255, 255, 0.4);
+    --bg-label-rwd: var(--color-b);
+    --bg-label-rwd--hover: var(--color-b);
+    --color-menu: #ffffff;
+    --color-menu--hover: #fff9c4;
+    --color-submenu: #ffffff;
+    --color-submenu--hover: var(--color-b);
+    --color-label-rwd: #ffffff;
+    --color-label-rwd--hover: #fff9c4;
+    /*
+
+        --- @media queries del sitio  ---
+
+    */
+    /* Para casos de global width máximo */
+    --max-width: 100%;
+    /* Declaración de los @media del sitio */
+    /* 480px */
+    --xs: 30rem;
+    /* 768px */
+    --xm: 48rem;
+    /* 1040px */
+    --xl: 65rem;
+    /* 1440px */
+    --xxl: 90rem;
+    /* 1600px */
+    --xxxl: 100rem;
+
+
+    /*
+        --- Imágenes del Sitio ---
+    */
+
+    /* Categoría CSS, Página textos */
+    --img_cat1_img1: url('../img/css_textos_1280x856.jpg');
+
+    --img_cat1_img2: url('../img/css_imagenes_1280x847.jpg');
+}
+
+/*
+-------------------------------------
+    --- Maquetación del sitio ---
+-------------------------------------
+
+*/
+/* @import url('_app/_theme/tema.css'); */
+
+
+/*
+    Las reglas agrupadas en esta categoria se aplican a
+    todo el proyecto como identidad corporativa.
+    Es la capa visual.
+*/
+
+/* ----------- MAQUETACIÓN ----------- */
+html, body, main {
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+}
+
+body>header {
+    position: fixed;
+    top: 0;
+    height: var(--height-header);
+    z-index: 3;
+}
+
+body>nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+body>nav ul li a {
+    line-height: var(--height-header);
+}
+
+body main {
+    min-height: 100%;
+    /* Bug ie10 */
+    min-height: 100vh;
+    height: auto;
+    margin-top: var(--height-header);
+    width: 100%;
+}
+
+@media screen and (min-width: 49rem) {
+    body main {
+        /* Efecto Parallax */
+        /* Height footer: */
+        /* margin-bottom: 100vh;     */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+/*
+
+-------------------------------------------
+    --- Icon fonts ---
+-------------------------------------------
+
+*/
+/* @import url('_app/_theme/fonts.css'); */
+
+@font-face {
+  font-family: "wcstudio";
+  src:url("../fonts/wcstudio.eot");
+  src:url("../fonts/wcstudio.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/wcstudio.woff") format("woff"),
+    url("../fonts/wcstudio.ttf") format("truetype"),
+    url("../fonts/wcstudio.svg#wcstudio") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "wcstudio" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "wcstudio" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\61";
+}
+.icon-location:before {
+  content: "\62";
+}
+.icon-mail:before {
+  content: "\63";
+}
+.icon-phone:before {
+  content: "\64";
+}
+.icon-fax:before {
+  content: "\65";
+}
+.icon-print:before {
+  content: "\66";
+}
+.icon-mobile:before {
+  content: "\67";
+}
+.icon-whatsapp:before {
+  content: "\68";
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    position: relative;
+    top: 0.1em;
+    margin-right: 0.2em;
+}
+
+
+/*
+
+----------------------------------------------------------------
+    --- Capas (header | menu | main | aside/s | footer ) ---
+----------------------------------------------------------------
+
+*/
+/* @import url('_app/_layout/header.css'); */
+
+/*
+    ----------------------------
+        --- Site header ---
+    ----------------------------
+
+*/
+body > header {
+    background-color: var(--color-b);
+}
+
+body>header a figure.logo {
+    background-image: var(--url-logo-header);
+    height: var(--height-header);
+    width: var(--wlogo-header);
+    margin: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: scroll;
+    background-origin: border-box;
+    filter: none;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+body>header a:focus figure.logo,
+body>header a:target figure.logo,
+body>header a:hover figure.logo {
+    /* filter: brightness(0.8) sepia(0.8) saturate(80); */
+    filter: var(--logo-filter--hover);
+}
+
+
+
+/* @import url('_app/_layout/menu.css'); */
+
+/*
+
+    Menu & submenu Responsive
+
+    by Sonia Álvarez
+
+*/
+
+body > nav {
+    background-color: var(--bg-menu);
+}
+
+/* Lista principal */
+body>nav ul.principal {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Listas submenus */
+body>nav ul.principal li ul {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body>nav ul.principal li ul li {
+    width: 100%;
+}
+
+
+/* Todos los ítems */
+body>nav ul.principal li {
+    transition: all 0.5s ease-out;
+}
+
+/* Todos los enlaces */
+body>nav ul.principal li a {
+    display: block;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+
+
+/* Colores del menú principal */
+
+body>nav ul.principal {
+    background-color: transparent;
+}
+body>nav ul.principal > li {
+    background-color: var(--bg-menu);
+}
+
+body>nav ul.principal > li > a {
+    color: var(--color-menu);
+}
+
+body>nav ul.principal > li:focus,
+body>nav ul.principal > li:target,
+body>nav ul.principal > li:hover {
+    background-color: var(--bg-menu-item--hover);
+}
+
+body>nav ul.principal > li:focus > a,
+body>nav ul.principal > li:target > a,
+body>nav ul.principal > li:hover > a {
+    color: var(--color-menu--hover);
+}
+
+/* Colores del submenú */
+
+body>nav ul.principal li ul {
+    background-color: var(--bg-submenu);
+}
+
+body>nav ul.principal>li>ul>li {
+    background-color: transparent;
+}
+
+body>nav ul.principal > li > ul > li > a {
+    color: var(--color-submenu);
+}
+
+
+body>nav ul.principal>li>ul>li:focus,
+body>nav ul.principal>li>ul>li:target,
+body>nav ul.principal>li>ul>li:hover {
+    background-color: var(--bg-submenu-item--hover);
+}
+
+body>nav ul.principal>li>ul>li:focus > a,
+body>nav ul.principal>li>ul>li:target > a,
+body>nav ul.principal>li>ul>li:hover > a {
+    color: var(--color-submenu--hover);
+}
+
+/*
+
+    Colores a la inversa hasta @media 48.9rem
+
+*/
+
+@media screen and (max-width: 48.9rem) {
+/* Colores del menú principal */
+
+    body>nav ul.principal {
+        background-color: var(--bg-submenu);
+    }
+    body>nav ul.principal > li {
+        background-color: transparent;
+    }
+
+    body>nav ul.principal > li > a {
+        color: var(--color-submenu);
+    }
+
+    body>nav ul.principal > li:focus,
+    body>nav ul.principal > li:target,
+    body>nav ul.principal > li:hover {
+        background-color: var(--bg-submenu-item--hover);
+    }
+
+    body>nav ul.principal > li:focus > a,
+    body>nav ul.principal > li:target > a,
+    body>nav ul.principal > li:hover > a {
+        color: var(--color-submenu--hover);
+    }
+
+    /* Colores del submenú */
+
+    body>nav ul.principal li ul {
+        background-color: transparent;
+    }
+
+    body>nav ul.principal>li>ul>li {
+        background-color: var(--bg-menu);
+    }
+
+    body>nav ul.principal ul > li > a {
+        color: var(--color-menu);
+    }
+
+
+    body>nav ul.principal>li>ul>li:focus,
+    body>nav ul.principal>li>ul>li:target,
+    body>nav ul.principal>li>ul>li:hover {
+        background-color: var(--bg-menu-item--hover);
+    }
+
+    body>nav ul.principal ul>li:focus > a,
+    body>nav ul.principal ul>li:target > a,
+    body>nav ul.principal ul>li:hover > a {
+        color: var(--color-menu--hover);
+    }
+}
+
+@media screen and (max-width: 48.9rem) {
+    body>nav {
+        background-color: var(--bg-label-rwd);
+    }
+    #icon-menu+label {
+        color: var(--color-label-rwd);
+    }
+    #icon-menu:checked+label {
+        background-color: var(--bg-label-rwd--hover);
+        color: var(--color-label-rwd--hover);
+    }
+}
+
+
+/* Icon-fonts */
+body>nav ul.principal li[class*="icon-"] {
+    padding-left: 1em;
+    color: var(--color-menu);
+}
+
+body>nav ul.principal li[class*="icon-"]>a {
+    padding-left: 0;
+}
+
+body>nav ul.principal li[class*="icon-"]:before {
+    top: 0;
+}
+
+
+/* Icon-font, normalmente icono hamburguesa para formato móvil */
+body>nav #icon-menu {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* Para ie6, ie7 */
+    clip: rect(1px 1px 1px 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+/*
+
+    Media Queries
+
+*/
+/*
+    @media hasta 48.9rem
+
+*/
+@media screen and (max-width: 48.9rem) {
+    body>nav ul.principal {
+        width: 100%;
+        height: 100%;
+        max-height: calc(100vh - var(--height-header));
+        overflow-y: auto;
+        display: none;
+    }
+
+    body>nav ul.principal > li {
+        width: 100%;
+        /* border-bottom */
+        height: calc(100% - 1px);
+    }
+    body>nav ul.principal li {
+        border-bottom: 1px solid rgba(255,255,255, 0.2);
+    }
+    body>nav ul.principal > li ul {
+        padding-left: 2em;
+    }
+
+    body>nav ul.principal li:last-child {
+        border-bottom: none;
+        padding-bottom: 2em;
+    }
+
+    #icon-menu+label {
+        display: block;
+        line-height: var(--height-header);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #icon-menu:checked+label {
+        width: 100%;
+    }
+
+    #icon-menu:checked~ul.principal {
+        display: block;
+    }
+}
+
+/*
+    @media desde 49rem
+
+*/
+
+@media all and (min-width: 49rem) {
+    body>nav ul.principal {
+        display: flex;
+        justify-content: center;
+    }
+
+    body>nav ul.principal>li {
+        display: inline-flex;
+        position: relative;
+    }
+
+    body>nav ul.principal>li[class*="icon-"]:before {
+        top: -0.1em;
+    }
+
+    body>nav ul.principal>li>ul {
+        position: absolute;
+        top: var(--height-header);
+        transition: opacity 0.5s linear;
+        /* opacity: 0; */
+        display: none;
+    }
+
+    body>nav ul.principal>li>ul li {
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 1px;
+    }
+
+    body>nav ul.principal>li:focus>ul,
+    body>nav ul.principal>li:target>ul,
+    body>nav ul.principal>li:hover>ul {
+        display: block;
+    }
+
+    #icon-menu {
+        display: none;
+    }
+
+    #icon-menu+label {
+        display: none;
+    }
+}
+
+
+
+
+/* @import url('_app/_layout/footer.css'); */
+
+body>footer {
+    position: relative;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: var(--color-b);
+}
+
+body > footer a {
+    color: white;
+}
+
+body > footer a:hover {
+    color: yellow;
+    border-bottom: 1px solid yellow;
+}
+
+body > footer ul.validadores {
+    display: flex;
+    justify-content: flex-start;
+}
+
+body > footer ul li.validator {
+}
+
+body > footer ul li.validator a {
+    display: inline-block;
+    padding: 0 0.5em 0 0;
+}
+
+
+body > footer ul li.validator a img.w3c,
+body > footer ul li.validator a figure.w3c {
+    background-image: var(--url_w3c);
+}
+
+body > footer ul li.validator a img.xhtml5,
+body > footer ul li.validator a figure.xhtml5 {
+    background-image: var(--url_xhtml5);
+}
+
+body > footer ul li.validator a img,
+body > footer ul li.validator a figure {
+    height: 2em;
+    width: 5.68em;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: scroll;
+    background-origin: border-box;
+}
+
+
+
+/* @import url('_app/_layout/formularios.css'); */
+
+
+body main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+form.form {
+    display: inline-block;
+}
+
+form.form fieldset {
+    margin: 1em;
+    border-radius: 5px;
+}
+
+form.form fieldset legend {
+    margin: 1em;
+    margin-bottom: 0;
+    padding: 1em 1.5em;
+    border: 1px solid grey;
+    text-align: left;
+    font-weight: 700;
+    border-radius: 5px;
+    background: hsla(0, 0%, 100%, .6);
+    box-shadow: 0 0 30pt rgba(0, 0, 0, .25), 0 0 5pt rgba(0, 0, 0, .22);
+}
+
+form.form ul {
+    margin: 0;
+    padding: 2em;
+    list-style: none;
+}
+
+form.form ul li {
+    padding: 0.5em;
+    display: inline-block;
+}
+
+form.form input,
+form.form textarea {
+    margin-top: 1em;
+    padding: 0.2em 0.5em;
+    line-height: 2.5;
+}
+
+form.form input:focus,
+form.form textarea:focus {
+    outline: none;
+    background-color: lightyellow;
+}
+
+form.form input::-moz-placeholder, form.form textarea::-moz-placeholder {
+    color: lightgrey;
+}
+
+form.form input:-ms-input-placeholder, form.form textarea:-ms-input-placeholder {
+    color: lightgrey;
+}
+
+form.form input::placeholder,
+form.form textarea::placeholder {
+    color: lightgrey;
+}
+
+form.form input:focus::-moz-placeholder, form.form textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+
+form.form input:focus:-ms-input-placeholder, form.form textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+form.form input:focus::placeholder,
+form.form textarea:focus::placeholder {
+    color: transparent;
+}
+
+form.form p.info {
+    text-align: left;
+}
+
+form.form ul.enviar {
+    text-align: center;
+}
+
+form.form ul.enviar li {
+    display: inline-block;
+    padding: 1em 2em;
+}
+
+form.form ul.enviar li input {
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+form.form ul li.textarea {
+    display: block;
+}
+
+form.form ul li.textarea textarea {
+    width: 100%;
+    margin-top: 1em;
+}
+
+form.form li.radio ul {
+    display: inline-block;
+    padding: 0;
+}
+
+
+form.form fieldset > ul > li > label,
+form.form fieldset > ul > li > strong {
+    display: block;
+    font-weight: bold;
+}
+
+form.form fieldset > ul > li > label[for="acepto"] a {
+    display: inline;
+}
+
+
+form.form p#errores {
+    display: none;
+    text-align: center;
+}
+
+form.form p#errores.success {
+    display: block;
+    color: green;
+}
+
+form.form p#errores.danger {
+    display: block;
+    color: tomato;
+}
+
+
+
+
+/*
+
+----------------------------------------------------------------
+    --- Vistas, estilos de las páginas ---
+----------------------------------------------------------------
+
+*/
+/* @import url('_app/_views/common.css'); */
+
+.color-primary {
+    color: var(--color-primary);
+}
+
+.color-secondary {
+    color: var(--color-secondary);
+}
+
+.color-success {
+    color: var(--color-success);
+}
+
+.color-danger {
+    color: var(--color-danger);
+}
+
+.color-warning {
+    color: var(--color-warning);
+}
+
+.color-light {
+    color: var(--color-light);
+}
+
+.color-dark {
+    color: var(--color-dark);
+}
+
+.color-required {
+    color: tomato;
+}
+
+.color-optional {
+    color: inherit;
+}
+
+.color-info {
+    color: steelblue;
+}
+
+.small {
+    font-size: small;
+}
+
+.image-before:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-origin: border-box;
+}
+
+/* Marca de agua */
+
+.agua:before {
+    position: fixed;
+    content: '';
+    /* top : 10vh; */
+    bottom: 5vh;
+    right: 5vh;
+    /* ratio del logo 1020/495 */
+    height: 20vh;
+    /* width de la marca de agua =  height * ratio */
+    width: 41.21vh;
+    opacity: 0.2;
+    background-image: url('../svg/logo.svg');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Estilos iconos sociales */
+
+ul.sociales {
+    padding: 0;
+}
+
+ul.sociales li,
+section.sociales ul li {
+    display: inline-block;
+}
+
+ul.sociales li a {
+    width: 3em;
+    height: 3em;
+    display: block;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+figure.social {
+    margin: 0;
+}
+
+ul.sociales figure.social svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+
+
+
+/* Frontal y hover Facebook */
+
+ul.sociales li.facebook a {
+    background-color: #3B5998;
+}
+
+ul.sociales li.facebook a:hover svg {
+    fill: #3B5998;
+}
+
+/* Frontal y hover Twitter */
+
+ul.sociales li.twitter a {
+    background-color: #00ACEE;
+}
+
+ul.sociales li.twitter a:hover svg {
+    fill: #00ACEE;
+}
+
+/* Frontal y hover Pinterest */
+
+ul.sociales li.pinterest a {
+    background-color: #BD081C;
+}
+
+ul.sociales li.pinterest a:hover svg {
+    fill: #BD081C;
+}
+
+/* Frontal y hover LinkedIn */
+
+ul.sociales li.linkedin a {
+    background-color: #0077B5;
+}
+
+ul.sociales li.linkedin a:hover svg {
+    fill: #0077B5;
+}
+
+/* Frontal y hover GitHub */
+
+ul.sociales li.github a {
+    background-color: #000000;
+}
+
+ul.sociales li.github a:hover svg {
+    fill: #000000;
+}
+
+/* Frontal y hover Google+ */
+
+ul.sociales li.googleplus a {
+    background-color: #D34836;
+}
+
+ul.sociales li.googleplus a:hover svg {
+    fill: #D34836;
+}
+
+
+
+
+/* Para todos */
+ul.sociales li a:hover {
+    background-color: transparent;
+}
+
+
+/* figure.facebook svg {
+    fill: #3B5998;
+}
+
+figure.facebook:hover svg {
+} */
+
+/* figure.twitter svg path {
+    fill: #00ACEE;
+}
+
+figure.twitter:hover svg {
+    background-color: #00ACEE;
+}
+figure.twitter:hover svg path {
+    fill: white;
+} */
+
+footer .social svg {
+    fill: white;
+}
+
+section.sociales figure.social svg {
+    width: 2em;
+    height: 2em;
+}
+
+
+
+/* Estilos animate.css */
+
+article.animaciones ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    font-weight: bold;
+    font-size: x-large;
+    color: steelblue;
+}
+
+header.portada {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+}
+
+.portada:before {
+    opacity: 1;
+    filter: brightness(1) blur(2px) grayscale(0.8);
+}
+
+.portada.textos:before {
+    background-image: var(--img_cat1_img1);
+}
+.portada.imagenes:before {
+    background-image: var(--img_cat1_img2);
+}
+
+header.portada h2 {
+    position: absolute;
+    margin: 0;
+    padding: 1em;
+    width: 100%;
+    background: rgba(51, 53, 119, 0.5);
+    top: 30%;
+    text-align: center;
+    color: white;
+}
+
+body.nocturno {
+    background-color: black;
+}
+main.nocturno {
+    background-color: black;
+    color: white;
+}
+
+main.nocturno a {
+    color: yellow;
+}
+
+main.nocturno a:target,
+main.nocturno a:focus,
+main.nocturno a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background-color: var(--bg-body);
+    color: var(--color-body);
+    line-height: 1.6;
+}
+
+body main article h2 {
+    color: var(--color-b);
+}
+
+@media screen and (max-width: 30rem) {
+    body main {
+        padding: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    body main {
+        padding: 5vw;
+    }
+}
+
+@media screen and (max-width: 90rem) {
+    body main {
+        padding: 7.5vw;
+    }
+}
+
+@media screen and (min-width: 91rem) {
+    body main {
+        padding: 10vw;
+    }
+}
+
+/* @import url('_app/_views/index.css'); */
+
+body main article #p1c,
+body main article #p1d {
+    /* display: inline-block; */
+    width: 50%;
+    padding: 1em;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+}

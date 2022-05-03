@@ -1,0 +1,54 @@
+body>footer {
+    position: relative;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: var(--color-b);
+}
+
+body > footer a {
+    color: white;
+}
+
+body > footer a:hover {
+    color: yellow;
+    border-bottom: 1px solid yellow;
+}
+
+body > footer ul.validadores {
+    display: flex;
+    justify-content: flex-start;
+}
+
+body > footer ul li.validator {
+}
+
+body > footer ul li.validator a {
+    display: inline-block;
+    padding: 0 0.5em 0 0;
+}
+
+
+body > footer ul li.validator a img.w3c,
+body > footer ul li.validator a figure.w3c {
+    background-image: var(--url_w3c);
+}
+
+body > footer ul li.validator a img.xhtml5,
+body > footer ul li.validator a figure.xhtml5 {
+    background-image: var(--url_xhtml5);
+}
+
+body > footer ul li.validator a img,
+body > footer ul li.validator a figure {
+    height: 2em;
+    width: 5.68em;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: scroll;
+    background-origin: border-box;
+}

@@ -1,0 +1,53 @@
+/*
+    Las reglas agrupadas en esta categoria se aplican a
+    todo el proyecto como identidad corporativa.
+    Es la capa visual.
+*/
+
+/* ----------- MAQUETACIÓN ----------- */
+html, body, main {
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+}
+
+body>header {
+    position: fixed;
+    top: 0;
+    height: var(--height-header);
+    z-index: 3;
+}
+
+body>nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+body>nav ul li a {
+    line-height: var(--height-header);
+}
+
+body main {
+    min-height: 100%;
+    /* Bug ie10 */
+    min-height: 100vh;
+    height: auto;
+    margin-top: var(--height-header);
+    width: 100%;
+}
+
+@media screen and (min-width: 49rem) {
+    body main {
+        /* Efecto Parallax */
+        /* Height footer: */
+        /* margin-bottom: 100vh;     */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

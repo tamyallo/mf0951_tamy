@@ -1,0 +1,302 @@
+/*
+
+    Menu & submenu Responsive
+
+    by Sonia Álvarez
+
+*/
+
+body > nav {
+    background-color: var(--bg-menu);
+}
+
+/* Lista principal */
+body>nav ul.principal {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Listas submenus */
+body>nav ul.principal li ul {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body>nav ul.principal li ul li {
+    width: 100%;
+}
+
+
+/* Todos los ítems */
+body>nav ul.principal li {
+    transition: all 0.5s ease-out;
+}
+
+/* Todos los enlaces */
+body>nav ul.principal li a {
+    display: block;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+
+
+/* Colores del menú principal */
+
+body>nav ul.principal {
+    background-color: transparent;
+}
+body>nav ul.principal > li {
+    background-color: var(--bg-menu);
+}
+
+body>nav ul.principal > li > a {
+    color: var(--color-menu);
+}
+
+body>nav ul.principal > li:focus,
+body>nav ul.principal > li:target,
+body>nav ul.principal > li:hover {
+    background-color: var(--bg-menu-item--hover);
+}
+
+body>nav ul.principal > li:focus > a,
+body>nav ul.principal > li:target > a,
+body>nav ul.principal > li:hover > a {
+    color: var(--color-menu--hover);
+}
+
+/* Colores del submenú */
+
+body>nav ul.principal li ul {
+    background-color: var(--bg-submenu);
+}
+
+body>nav ul.principal>li>ul>li {
+    background-color: transparent;
+}
+
+body>nav ul.principal > li > ul > li > a {
+    color: var(--color-submenu);
+}
+
+
+body>nav ul.principal>li>ul>li:focus,
+body>nav ul.principal>li>ul>li:target,
+body>nav ul.principal>li>ul>li:hover {
+    background-color: var(--bg-submenu-item--hover);
+}
+
+body>nav ul.principal>li>ul>li:focus > a,
+body>nav ul.principal>li>ul>li:target > a,
+body>nav ul.principal>li>ul>li:hover > a {
+    color: var(--color-submenu--hover);
+}
+
+/*
+
+    Colores a la inversa hasta @media 48.9rem
+
+*/
+
+@media screen and (max-width: 48.9rem) {
+/* Colores del menú principal */
+
+    body>nav ul.principal {
+        background-color: var(--bg-submenu);
+    }
+    body>nav ul.principal > li {
+        background-color: transparent;
+    }
+
+    body>nav ul.principal > li > a {
+        color: var(--color-submenu);
+    }
+
+    body>nav ul.principal > li:focus,
+    body>nav ul.principal > li:target,
+    body>nav ul.principal > li:hover {
+        background-color: var(--bg-submenu-item--hover);
+    }
+
+    body>nav ul.principal > li:focus > a,
+    body>nav ul.principal > li:target > a,
+    body>nav ul.principal > li:hover > a {
+        color: var(--color-submenu--hover);
+    }
+
+    /* Colores del submenú */
+
+    body>nav ul.principal li ul {
+        background-color: transparent;
+    }
+
+    body>nav ul.principal>li>ul>li {
+        background-color: var(--bg-menu);
+    }
+
+    body>nav ul.principal ul > li > a {
+        color: var(--color-menu);
+    }
+
+
+    body>nav ul.principal>li>ul>li:focus,
+    body>nav ul.principal>li>ul>li:target,
+    body>nav ul.principal>li>ul>li:hover {
+        background-color: var(--bg-menu-item--hover);
+    }
+
+    body>nav ul.principal ul>li:focus > a,
+    body>nav ul.principal ul>li:target > a,
+    body>nav ul.principal ul>li:hover > a {
+        color: var(--color-menu--hover);
+    }
+}
+
+@media screen and (max-width: 48.9rem) {
+    body>nav {
+        background-color: var(--bg-label-rwd);
+    }
+    #icon-menu+label {
+        color: var(--color-label-rwd);
+    }
+    #icon-menu:checked+label {
+        background-color: var(--bg-label-rwd--hover);
+        color: var(--color-label-rwd--hover);
+    }
+}
+
+
+/* Icon-fonts */
+body>nav ul.principal li[class*="icon-"] {
+    padding-left: 1em;
+    color: var(--color-menu);
+}
+
+body>nav ul.principal li[class*="icon-"]>a {
+    padding-left: 0;
+}
+
+body>nav ul.principal li[class*="icon-"]:before {
+    top: 0;
+}
+
+
+/* Icon-font, normalmente icono hamburguesa para formato móvil */
+body>nav #icon-menu {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* Para ie6, ie7 */
+    clip: rect(1px 1px 1px 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+/*
+
+    Media Queries
+
+*/
+/*
+    @media hasta 48.9rem
+
+*/
+@media screen and (max-width: 48.9rem) {
+    body>nav ul.principal {
+        width: 100%;
+        height: 100%;
+        max-height: calc(100vh - var(--height-header));
+        overflow-y: auto;
+        display: none;
+    }
+
+    body>nav ul.principal > li {
+        width: 100%;
+        /* border-bottom */
+        height: calc(100% - 1px);
+    }
+    body>nav ul.principal li {
+        border-bottom: 1px solid rgba(255,255,255, 0.2);
+    }
+    body>nav ul.principal > li ul {
+        padding-left: 2em;
+    }
+
+    body>nav ul.principal li:last-child {
+        border-bottom: none;
+        padding-bottom: 2em;
+    }
+
+    #icon-menu+label {
+        display: block;
+        line-height: var(--height-header);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #icon-menu:checked+label {
+        width: 100%;
+    }
+
+    #icon-menu:checked~ul.principal {
+        display: block;
+    }
+}
+
+/*
+    @media desde 49rem
+
+*/
+
+@media all and (min-width: 49rem) {
+    body>nav ul.principal {
+        display: flex;
+        justify-content: center;
+    }
+
+    body>nav ul.principal>li {
+        display: inline-flex;
+        position: relative;
+    }
+
+    body>nav ul.principal>li[class*="icon-"]:before {
+        top: -0.1em;
+    }
+
+    body>nav ul.principal>li>ul {
+        position: absolute;
+        top: var(--height-header);
+        transition: opacity 0.5s linear;
+        /* opacity: 0; */
+        display: none;
+    }
+
+    body>nav ul.principal>li>ul li {
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 1px;
+    }
+
+    body>nav ul.principal>li:focus>ul,
+    body>nav ul.principal>li:target>ul,
+    body>nav ul.principal>li:hover>ul {
+        display: block;
+    }
+
+    #icon-menu {
+        display: none;
+    }
+
+    #icon-menu+label {
+        display: none;
+    }
+}

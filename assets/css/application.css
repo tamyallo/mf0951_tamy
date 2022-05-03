@@ -1,0 +1,61 @@
+@charset "utf-8";
+/*
+
+-------------------------------
+    --- Inicializaciones ---
+-------------------------------
+
+*/
+@import url('_common/_vendors/normalize.css');
+@import url('_app/_theme/base.css');
+@import url('_app/_theme/variables.css');
+/*
+
+-------------------------------------
+    --- Maquetación del sitio ---
+-------------------------------------
+
+*/
+@import url('_app/_theme/tema.css');
+/*
+
+-------------------------------------------
+    --- Branding | Tema Corporativo ---
+-------------------------------------------
+
+*/
+@import url('_app/_theme/fonts.css');
+
+/*
+
+----------------------------------------------------------------
+    --- Capas (header | menu | main | aside/s | footer ) ---
+----------------------------------------------------------------
+
+*/
+@import url('_app/_layout/header.css');
+@import url('_app/_layout/menu.css');
+@import url('_app/_layout/footer.css');
+@import url('_app/_layout/formularios.css');
+
+/*
+
+--------------------------------------------------------------------------
+    --- Utilidades | librerías de estilos comunes a varios proyectos ---
+--------------------------------------------------------------------------
+
+*/
+@import url('_common/_utils/iconos.css');
+@import url('_common/_utils/flexbox.css');
+@import url('_common/_utils/visibilidad.css');
+
+
+/*
+
+----------------------------------------------------------------
+    --- Vistas, estilos de las páginas ---
+----------------------------------------------------------------
+
+*/
+@import url('_app/_views/common.css');
+@import url('_app/_views/index.css');

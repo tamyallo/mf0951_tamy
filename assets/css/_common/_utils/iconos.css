@@ -1,0 +1,6 @@
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    position: relative;
+    top: 0.1em;
+    margin-right: 0.2em;
+}

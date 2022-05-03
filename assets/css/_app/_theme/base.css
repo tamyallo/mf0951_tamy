@@ -1,0 +1,41 @@
+/*=============================================>>>>>
+* Web Design | Content Creation
+* Responsive Web Desing | Usable and Accessible Design
+* Framework Css3 | Semantic html5 templates
+* W3C Validator
+* (CC BY-NC)
+* @version 1.3 June 2017
+* @author Sonia Álvarez Brasa
+===============================================>>>>>*/
+
+/*
+    Las reglas agrupadas en esta categoría se aplican a
+    selectores HTML puros y sin descendientes.
+*/
+
+/* A TODOS: comodin no recomendable */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Centrado automático y familia por defecto */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* imagenes responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

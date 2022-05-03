@@ -1,0 +1,32 @@
+/*
+    ----------------------------
+        --- Site header ---
+    ----------------------------
+
+*/
+body > header {
+    background-color: var(--color-b);
+}
+
+body>header a figure.logo {
+    background-image: var(--url-logo-header);
+    height: var(--height-header);
+    width: var(--wlogo-header);
+    margin: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: scroll;
+    background-origin: border-box;
+    filter: none;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+body>header a:focus figure.logo,
+body>header a:target figure.logo,
+body>header a:hover figure.logo {
+    /* filter: brightness(0.8) sepia(0.8) saturate(80); */
+    filter: var(--logo-filter--hover);
+}

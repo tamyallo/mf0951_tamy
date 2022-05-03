@@ -1,0 +1,214 @@
+/*
+    todo: las clases de alineacion (justify, top, bottom ..)
+    se aplican a un item unico o a todo un contenedor para que hereden sus hijos
+*/
+/*
+    =======================
+        = CLASS FLEX =
+    =======================
+*/
+/* ----------- CONTAINER -----------
+    display: flex; or inline-flex
+*/
+
+.linea,
+.continente {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.continente {
+    flex-wrap: wrap;
+}
+
+/* ----------- ITEM ----------- */
+.celda,
+.contenido { margin: 0; }
+
+.contenido { width : 100%; }
+
+/*
+    ================================
+        = CLASS FLEX CONTAINER =
+    ================================
+*/
+/* ----------- FLEX DIRECTION ----------------------------------
+    flex-direction: row | row-reverse | column | column-reverse;
+*/
+.reverse,
+.reverse-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.reverse-wrap { flex-wrap: wrap; }
+
+.column,
+.column-wrap,
+.column-reverse {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-wrap { flex-wrap: wrap; }
+
+.column-reverse { flex-direction: column-reverse; }
+
+
+/* ========== MAIN-AXIS =================== */
+
+/* ----------- JUSTIFY-CONTENT ------------ */
+/*
+    justify-content:
+        flex-start | flex-end | center | space-between | space-around; */
+
+/* --- flex-start --- */
+.main-inicio,
+.main-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-start { flex-wrap: wrap; }
+
+/* --- flex-end --- */
+.main-fin,
+.main-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-end { flex-wrap: wrap; }
+
+/* --- center --- */
+
+.main-centro,
+.main-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Bug ie10 idem column */
+.column-main-centro,
+.column-main-center {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    text-align: center;
+}
+
+.main-center,
+.column-main-center {
+    flex-wrap: wrap;
+}
+
+/* -- space-between --- */
+
+.justificado,
+.justify {
+    display: flex;
+    justify-content: space-between;
+}
+
+.justify { flex-wrap: wrap; }
+
+/* --- space-around --- */
+
+.rodeado,
+.distribute {
+    justify-content: space-around;
+    display: flex;
+}
+
+.distribute { flex-wrap: wrap; }
+
+
+/*  ======== CROSS-AXIS ========================== */
+
+/* --------- ALIGN-ITEMS & ALIGN CONTENT ...------ */
+/*
+    align-items:
+        flex-start | flex-end | center | baseline | stretch; */
+
+
+/*  --- start --- */
+
+.cross-inicio,
+.cross-start {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.cross-start { flex-wrap: wrap; }
+
+/*  --- end --- */
+
+.cross-fin,
+.cross-end {
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+.cross-end { flex-wrap: wrap; }
+
+
+/*  --- center --- */
+
+.cross-centro,
+.cross-center {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+/* // Bug ie10 idem column */
+.column-cross-centro,
+.column-cross-center {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    align-content: center;
+}
+
+.cross-center,
+.column-cross-center {
+    flex-wrap: wrap;
+}
+
+/* ------------------------------------------------------
+    --- Centrado absoluto (vertical y horizontal) ---
+--------------------------------------------------------- */
+
+.abcentro,
+.abcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+/* // Bug ie10 idem column */
+.column-abcentro,
+.column-abcenter {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.abcenter,
+.column-abcenter {
+    flex-wrap: wrap;
+}

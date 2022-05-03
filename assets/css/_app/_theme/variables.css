@@ -1,0 +1,99 @@
+:root {
+    /*
+
+    --------------------------------
+        --- header del sitio ---
+    --------------------------------
+
+    */
+    --height-header: 3.5rem;
+    /*
+
+    --------------------------------
+        --- logo del sitio ---
+    --------------------------------
+
+    */
+    /* Logo olímpico 1020 x 495 pixeles */
+    /* --url-logo-index: url('../svg/Olympic_Rings_clip_art.svg'); */
+    --url-logo-header: url('../../../svg/logo.svg');
+
+    /* ratio del logo 1020/495 */
+    /* ancho del logo = --height-header * ratio */
+    --wlogo-header: 7.21rem;
+    /* Efecto al hover */
+    --logo-filter--hover: hue-rotate(180deg);
+    /* Ejemplo de filtro múltiple */
+    /* filter: brightness(0.8) sepia(0.8) saturate(80); */
+
+    /*
+        URL's y ratios logos validadores
+    */
+    --url_w3c: url('../../../svg/w3c/css.svg');
+    --url_xhtml5: url('../../../svg/w3c/html5.svg');
+    --w3c_ratio: 88/31;
+    --xhtml5_ratio: 182/64;
+    --height-w3c: 1.5em;
+    /*
+
+    ------------------------------------
+        --- Colores corporativos ---
+    ------------------------------------
+
+    */
+    --color-b: #333577;
+    --color-t1: #807515;
+    --color-t2: #553000;
+    /* bootstrap Colors */
+    --color-primary: #007bff;
+    --color-secondary: #6c757d;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-warning: peru;
+    --color-info: #17a2b8;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+    --bg-body: #f9f9f9;
+    --color-body: #666666;
+    /* Colores menu */
+    --bg-menu: var(--color-b);
+    --bg-menu-item--hover: rgba(255, 255, 255, 0.2);
+    --bg-submenu: var(--color-t1);
+    --bg-submenu-item--hover: rgba(255, 255, 255, 0.4);
+    --bg-label-rwd: var(--color-b);
+    --bg-label-rwd--hover: var(--color-b);
+    --color-menu: #ffffff;
+    --color-menu--hover: #fff9c4;
+    --color-submenu: #ffffff;
+    --color-submenu--hover: var(--color-b);
+    --color-label-rwd: #ffffff;
+    --color-label-rwd--hover: #fff9c4;
+    /*
+
+        --- @media queries del sitio  ---
+
+    */
+    /* Para casos de global width máximo */
+    --max-width: 100%;
+    /* Declaración de los @media del sitio */
+    /* 480px */
+    --xs: 30rem;
+    /* 768px */
+    --xm: 48rem;
+    /* 1040px */
+    --xl: 65rem;
+    /* 1440px */
+    --xxl: 90rem;
+    /* 1600px */
+    --xxxl: 100rem;
+
+
+    /*
+        --- Imágenes del Sitio ---
+    */
+
+    /* Categoría CSS, Página textos */
+    --img_cat1_img1: url('../../../img/css_textos_1280x856.jpg');
+
+    --img_cat1_img2: url('../../../img/css_imagenes_1280x847.jpg');
+}

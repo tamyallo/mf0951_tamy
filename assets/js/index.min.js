@@ -1,0 +1,1 @@
+function dameHora(){var e=new Date;return e.getHours()+":"+e.getMinutes()+":"+e.getSeconds()}window.onload=function(){document.getElementById("p1c").innerHTML=document.compatMode,document.getElementById("p1c2").innerHTML=document.compatMode,console.log(dameHora()),document.getElementById("p1d").innerHTML=dameHora()};
